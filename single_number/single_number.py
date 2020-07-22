@@ -9,7 +9,7 @@ def single_number(arr):
     for i in arr:
         if i not in result:
             result.append(i)
-            
+
         else:
             result.remove(i)
 

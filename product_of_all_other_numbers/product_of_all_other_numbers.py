@@ -1,11 +1,21 @@
+from functools import reduce
 '''
 Input: a List of integers
 Returns: a List of integers
 '''
+
 def product_of_all_other_numbers(arr):
     # Your code here
+    
+    return [reduce(lambda x, y : x * y, arr[:i] + arr[i+1:])
 
-    pass
+        for i in range(len(arr))]
+
+
+
+
+# research from https://www.python-course.eu/python3_lambda.php and stack overflow
+
 
 
 if __name__ == '__main__':
